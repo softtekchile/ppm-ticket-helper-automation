@@ -156,10 +156,14 @@ public class CrearTicket {
 		WebElement CreateTkBtn = driver.findElement(By.id("submit"));
 		CreateTkBtn.click();
 		
+		//Guardar número de Ticket creado
+		WebElement NroTk = driver.findElement(By.className("field-prompt"));
 		
-		System.out.println("Ticket Creado.");
+		System.out.println("Ticket Creado:" + NroTk);
 	}
-
+	
+	//Ubicación de número de Tk y nombre de variables
+	/**Bastián, 11:56 <td valign="top" nowrap=""><span class="field-prompt">Solicitud nº:</span> <span class="field-value"><a href="../crt/RequestDetail.jsp?REQUEST_ID=3605090">3605090</a></span></td> */
 	/** Static sleep */
 	private void sleep(long millis) {
 		try {
