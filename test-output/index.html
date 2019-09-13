@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\daniela.souza\AppData\Local\Temp\testng-eclipse-1356030414\testng-customsuite.xml</span>
+                    <span>C:\Users\daniela.souza\AppData\Local\Temp\testng-eclipse-1629712442\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.softtek.ppm.CrearTicket" hash-for-method="logIn">logIn</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.softtek.ppm.CrearTicket" hash-for-method="testTicket">testTicket</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,9 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="logIn">
-                  </a> <!-- logIn -->
-                  <span class="method-name">logIn</span>
+                  <a name="testTicket">
+                  </a> <!-- testTicket -->
+                  <span class="method-name">testTicket</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\daniela.souza\AppData\Local\Temp\testng-eclipse-1356030414\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\daniela.souza\AppData\Local\Temp\testng-eclipse-1629712442\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +144,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.softtek.ppm.CrearTicket&quot;/&gt;
+      &lt;class name=&quot;com.softtek.ppm.CrearTicket&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testTicket&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.softtek.ppm.CrearTicket --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -186,9 +190,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'logIn')
+data.setCell(0, 1, 'testTicket')
 data.setCell(0, 2, 'com.softtek.ppm.CrearTicket')
-data.setCell(0, 3, 86646);
+data.setCell(0, 3, 107094);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -221,7 +225,7 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.softtek.ppm.CrearTicket</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">logIn</span>
+                <span class="method-name">testTicket</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

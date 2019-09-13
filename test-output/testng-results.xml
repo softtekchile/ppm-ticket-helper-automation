@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="86665" started-at="2019-08-22T21:46:01Z" finished-at="2019-08-22T21:47:28Z">
+  <suite name="Default suite" duration-ms="107113" started-at="2019-09-13T13:01:36Z" finished-at="2019-09-13T13:03:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="86665" started-at="2019-08-22T21:46:01Z" finished-at="2019-08-22T21:47:28Z">
+    <test name="Default test" duration-ms="107113" started-at="2019-09-13T13:01:36Z" finished-at="2019-09-13T13:03:23Z">
       <class name="com.softtek.ppm.CrearTicket">
-        <test-method status="PASS" signature="logIn()[pri:0, instance:com.softtek.ppm.CrearTicket@6833ce2c]" name="logIn" duration-ms="86646" started-at="2019-08-22T18:46:01Z" finished-at="2019-08-22T18:47:28Z">
+        <test-method status="PASS" signature="testTicket()[pri:0, instance:com.softtek.ppm.CrearTicket@546a03af]" name="testTicket" duration-ms="107094" started-at="2019-09-13T10:01:36Z" finished-at="2019-09-13T10:03:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logIn -->
+        </test-method> <!-- testTicket -->
       </class> <!-- com.softtek.ppm.CrearTicket -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

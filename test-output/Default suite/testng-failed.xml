@@ -3,7 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.softtek.ppm.CrearTicket"/>
+      <class name="com.softtek.ppm.CrearTicket">
+        <methods>
+          <include name="testTicket"/>
+        </methods>
+      </class> <!-- com.softtek.ppm.CrearTicket -->
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Failed suite [Default suite] -->

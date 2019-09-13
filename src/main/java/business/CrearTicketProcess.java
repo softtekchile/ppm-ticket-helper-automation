@@ -1,34 +1,18 @@
-package com.softtek.ppm;
+package business;
+import java.net.URI;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.Select;
 
-import business.CrearTicketProcess;
 import entities.dto.Auth;
 import entities.dto.TicketPPM;
 
-import org.openqa.selenium.support.ui.Select;
+public class CrearTicketProcess {
 
-/** @author daniela.souza */
-
-public class CrearTicket {
-
-	@Test
-	public void testTicket(){
-		TicketPPM ticketPPM = new TicketPPM();
-		Auth auth = new Auth();
-		auth.setMail("daniela.souza@softtek.com");
-		auth.setPw("S0ftt3k.2019");
-		
-		String nroTicket = CrearTicketProcess.CrearTk(ticketPPM, auth);
-		System.out.println(nroTicket);
-	}
-	/*
-	@Test
-	public void logIn() {
+	public static String CrearTk(TicketPPM ticketPPM, Auth auth) {
 		System.out.println("Comenzando Crear Ticket");
 		// Create driver
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
@@ -47,10 +31,10 @@ public class CrearTicket {
 		// Log in to page
 		// enter username
 		WebElement username = driver.findElement(By.id("field-username"));
-		username.sendKeys("daniela.souza");
+		username.sendKeys(auth.getMail().substring(0,auth.getMail().indexOf("@")));
 		// enter password
 		WebElement password = driver.findElement(By.id("field-password"));
-		password.sendKeys("S0ftt3k.2019");
+		password.sendKeys(auth.getPw());
 		// push log in button
 		WebElement logInButton = driver.findElement(By.xpath("//*[@id=\"label-LOGON_SUBMIT_BUTTON_CAPTION\"]"));
 		logInButton.click();
@@ -138,7 +122,7 @@ public class CrearTicket {
 		
 		//Dynamic Data
 		WebElement DescriptionText = driver.findElement(By.id("REQ.DESCRIPTION"));
-		DescriptionText.sendKeys("QS-GTD-XXX-DESCRIPCION");
+		DescriptionText.sendKeys("[QS] [GTD-Nº] PRUEBA AUTOMATIZACION");
 		sleep(3000);
 		
 		//Dynamic Data
@@ -151,7 +135,7 @@ public class CrearTicket {
 		
 		//Dynamic Data
 		WebElement ClientIdText = driver.findElement(By.id("REQD.P.CLIENT_ID"));
-		ClientIdText.sendKeys("GTD-XXX");
+		ClientIdText.sendKeys("PRUEBA AUTOMATIZACION GTD-Nº");
 		sleep(3000);
 		
 		//Static Data
@@ -161,7 +145,7 @@ public class CrearTicket {
 		
 		//Dynamic Data
 		WebElement DetailDescriptiontext = driver.findElement(By.id("REQD.P.DETAILED_DESCRIPTION"));
-		DetailDescriptiontext.sendKeys("DESCRIPCIÓN DEL PROBLEMA Y LA SOLUCIÓN REQUERIDA");
+		DetailDescriptiontext.sendKeys("PRUEBA AUTOMATIZACIÓN DESCRIPCIÓN DEL PROBLEMA Y LA SOLUCIÓN REQUERIDA");
 		sleep(3000);
 		
 		//WebElement OrgUnitBuscarBtn = driver.findElement(By.xpath("//*[@id=\"filterPanelFindButton\"]"));
@@ -171,17 +155,25 @@ public class CrearTicket {
 				
 		WebElement CreateTkBtn = driver.findElement(By.id("submit"));
 		CreateTkBtn.click();
-		
+		sleep(5000);
 		//Guardar número de Ticket creado
 		WebElement NroTk = driver.findElement(By.xpath("//*[@id=\"page-min-width-div\"]/div[5]/div/div/div[1]/div/table[1]/tbody/tr[3]/td[2]/table/tbody/tr[3]/td[1]/span[2]/a"));
+		//String url2 = driver.getCurrentUrl();
+		//URI theUri = new URI(url2);
+		//String requestId= HttpUtility.ParseQueryString(theUri.Query).Get("REQUEST_ID");
 		
-		System.out.println("Ticket Creado:" + NroTk);
+		//System.out.println("Ticket Creado:" + NroTk);
+		System.out.println("Ticket Creado:" + NroTk.getText());//FUNCIONA
+		//System.out.println("Ticket Creado:" + NroTk.toString());
+		//System.out.println("Ticket Creado:" + NroTk.getCssValue(url2));
+		//System.out.println("Ticket Creado:" + url2);
+		return "123";
 	}
-	*/
+	
 	//Ubicación de número de Tk y nombre de variables
 	/**Bastián, 11:56 <td valign="top" nowrap=""><span class="field-prompt">Solicitud nº:</span> <span class="field-value"><a href="../crt/RequestDetail.jsp?REQUEST_ID=3605090">3605090</a></span></td> */
 	/** Static sleep */
-	private void sleep(long millis) {
+	private static void sleep(long millis) {
 		try {
 			Thread.sleep(millis);
 		} catch (InterruptedException e) {
@@ -190,5 +182,4 @@ public class CrearTicket {
 		}
 
 	}
-
 }
